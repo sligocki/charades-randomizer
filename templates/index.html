@@ -1,0 +1,40 @@
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131478554-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131478554-2');
+</script>
+
+  <title>Social Distancing Charades</title>
+  <style>
+    * {
+      font-size: xx-large;
+    }
+    .button {
+      background-color: purple;
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Social Distancing Charades</h2>
+
+  <hr />
+
+  <form action="{{new_room_url}}">
+    <input type="text" name="room_name" />
+    <input class="button" type="submit" value="Create a new room" />
+  </form>
+
+</body>

@@ -11,8 +11,8 @@
 
   <title>Social Distancing Charades</title>
   <style>
-    * {
-      font-size: xx-large;
+    input {
+      font-size: 20px;
     }
     .button {
       background-color: green;
@@ -28,20 +28,38 @@
   </style>
 </head>
 <body>
-  <h2>Social Distancing Charades</h2>
+  <a href="/">
+    <h2>Social Distancing Charades</h2>
+  </a>
 
   <hr />
 
-  <form>
+  <form method="post">
     <input type="text" name="add_word" />
     <input class="button" type="submit" value="Add a word" />
   </form>
 
   <hr />
 
-  <form>
+  <form method="post">
     <input type="hidden" name="get_random_word" value="t" />
     <input class="button" type="submit" value="Get a word" />
   </form>
-  <h3><b>{{random_word}}</b></h3>
+  <h3>
+    <b>{{random_word}}</b>
+    {% if num_words_left != None %}
+      ({{num_words_left}} words left)
+    {% endif %}
+  </h3>
+
+  <hr />
+
+  <p>
+    You created a room. To play with friends:
+    <ol>
+      <li>Share this URL with them: <pre>{{room_url}}</pre></li>
+      <li>Each person "Add a word" (as many times as you like)</li>
+      <li>When it's your turn, "Get a word" and then act it out over video chat.</li>
+    </ol>
+  </p>
 </body>
