@@ -1,0 +1,37 @@
+<head>
+  <title>Social Distancing Charades</title>
+  <style>
+    * {
+      font-size: xx-large;
+    }
+    .button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Social Distancing Charades</h2>
+
+  <hr />
+
+  <form>
+    <input type="text" name="add_word" />
+    <input class="button" type="submit" value="Add a word" />
+  </form>
+
+  <hr />
+
+  <form>
+    <input type="hidden" name="get_random_word" value="t" />
+    <input class="button" type="submit" value="Get a word" />
+  </form>
+  <h3><b>{{random_word}}</b></h3>
+</body>
